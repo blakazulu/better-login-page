@@ -18,16 +18,16 @@ export class AppComponent {
   private currentPupilXPos = 0;
   private currentPupilYPos = 0;
 
-  value: string = "";
+  emailValue: string = "";
   passwordValue: string = "";
   constructor(private renderer: Renderer2) {}
 
   ngOnInit() {}
 
-  onFocus() {
+  onEmailFocus() {
     this.renderer.setStyle(this.svgEye.nativeElement, "width", "500px");
-    this.calculatePupilXPos(this.value.length);
-    this.calculatePupilYPos(this.value.length);
+    this.calculatePupilXPos(this.emailValue.length);
+    this.calculatePupilYPos(this.emailValue.length);
     this.renderer.setStyle(
       this.pupil.nativeElement,
       "transform",
@@ -35,7 +35,7 @@ export class AppComponent {
     );
   }
 
-  onPassFocus() {
+  onPasswordFocus() {
     this.renderer.setStyle(this.svgEye.nativeElement, "width", "500px");
     this.renderer.setStyle(this.sclera.nativeElement, "fill", "#3F3D56");
   }
@@ -50,7 +50,7 @@ export class AppComponent {
     );
   }
 
-  onChange(e: string) {
+  onEmailChange(e: string) {
     this.calculatePupilXPos(e.length);
     this.calculatePupilYPos(e.length);
     this.renderer.setStyle(

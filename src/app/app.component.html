@@ -23,11 +23,11 @@
 	<section class="form-container">
 		<mat-form-field class="form-field">
 			<mat-label>Enter email</mat-label>
-			<input (ngModelChange)="onChange($event)" (focus)="onFocus()" (blur)="onBlur()" matInput type="email" [(ngModel)]="value" placeholder="Ex. pat@example.com">
+			<input (ngModelChange)="onEmailChange($event)" (focus)="onEmailFocus()" (blur)="onBlur()" matInput type="email" [(ngModel)]="emailValue" placeholder="Ex. pat@example.com">
 		</mat-form-field><br>
 			<mat-form-field class="form-field">
 				<mat-label>Enter password</mat-label>
-				<input (focus)="onPassFocus()" (blur)="onBlur()" matInput type="password" [(ngModel)]="passwordValue">
+				<input (focus)="onPasswordFocus()" (blur)="onBlur()" matInput type="password" [(ngModel)]="passwordValue">
 		</mat-form-field>
 	</section>
 </section>
